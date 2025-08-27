@@ -24,6 +24,4 @@ The test cases are executed on the practice website [Automation Exercise](https:
    Introduction ---> 
                    src ---> 
                           com/selenium
-                                     ---->SellIntroduction.java
-                                     ---->Logintest.java
-                                     ---->Addproducts.java
+                                     ---->SellIntroduction.java, Logintest.java, Addproducts.java
