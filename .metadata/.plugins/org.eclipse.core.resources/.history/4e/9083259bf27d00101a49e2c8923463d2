@@ -1,0 +1,30 @@
+package com.selenium;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SellIntroduction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver=new ChromeDriver();
+		
+		//WebDriver driver=new ChromeDriver();
+		driver.get("https://www.automationexercise.com/");
+		Duration duration= Duration.ofSeconds(5);
+		driver.manage().timeouts().implicitlyWait(duration);
+		driver.findElement(By.cssSelector("ul.nav li a[href*='login']")).click();
+		driver.findElement(By.xpath("//div[@class='signup-form']//input[@name='name']")).sendKeys("DammyName");
+		driver.findElement(By.xpath("//div[@class='signup-form']//input[@name='email']")).sendKeys("Dammy2025@gmail.com");
+		driver.findElement(By.xpath("//div[@class='signup-form']//button[text()='Signup']")).click();
+		
+		driver.findElement(By.xpath("//form[@action='/signup']//label[@for='id_gender1']")).click();
+		driver.findElement(By.cssSelector("form[action*='signup'] input[type='password']")).sendKeys("Dammy@123");
+	}
+
+}
+
